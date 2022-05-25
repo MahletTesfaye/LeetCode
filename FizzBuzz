@@ -1,0 +1,13 @@
+
+    def fizzBuzz(self, n: int) -> List[str]:
+        b= []
+        for i in range (n) :
+            if ((i+1) % 3 == 0):
+                b.append ("Fizz")
+            elif ((i+1) % 5 == 0):
+                b.append ("Buzz")
+            elif ((i+1) % 3 == 0 and (i+1) % 5 == 0):
+                b. append ("FizzBuzz")
+            else:
+                b.append (str(i+1))
+        return b
