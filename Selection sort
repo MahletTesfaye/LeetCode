@@ -1,0 +1,13 @@
+class Solution: 
+    def select(self, arr, i):
+        return arr[i]
+    
+    def selectionSort(self, arr,n):
+        for i in range (n):
+            indx = i
+            for j in range (i+1,n):
+                if arr[indx]>arr[j]:
+                    indx = j
+            arr[i],arr[indx] = arr[indx],arr[i]
+            self.select(arr, i)
+        return arr
