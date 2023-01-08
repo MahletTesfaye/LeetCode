@@ -1,0 +1,16 @@
+class Solution:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        points_dis_dict = []
+        for i in range(len(points)):
+            distance = math.sqrt((points[i][0])**2+(points[i][1])**2)
+            points_dis_dict_each = {
+                "distance": distance,
+                "point": points[i]
+            }
+            points_dis_dict.append(points_dis_dict_each)
+        points_dis_dict_sorted = sorted(points_dis_dict, key=lambda x: x['distance'])
+
+        closestPoints = []
+        for m in range (k):
+            closestPoints.append(points_dis_dict_sorted[m]["point"])
+        return closestPoints
