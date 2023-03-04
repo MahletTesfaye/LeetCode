@@ -1,0 +1,5 @@
+rectangular_board = input().split()
+M = int(rectangular_board[0])
+N = int(rectangular_board[1])
+max_numOfSquares = (M*N)//2
+print(max_numOfSquares)
